@@ -25,10 +25,10 @@ const App = () => {
         if (employee) {
           setuser('employee')
           setlaggedInUserData(employee)
-          // Optional: Update the snapshot to keep it fresh
+
           localStorage.setItem('loggedInUser', JSON.stringify({ role: 'employee', data: employee }))
         } else {
-          // Fallback if something is wrong with main store
+
           setuser(userData.role)
           setlaggedInUserData(userData.data)
         }

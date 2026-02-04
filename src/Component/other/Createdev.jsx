@@ -21,16 +21,16 @@ const Createdev = () => {
     if (empIndex !== -1) {
       const task = employees[empIndex].tasks[taskIdx]
 
-      // Update counts
+
       if (task.active) employees[empIndex].taskNumbers.active -= 1
       if (task.newTask) employees[empIndex].taskNumbers.newTask -= 1
       if (task.completed) employees[empIndex].taskNumbers.completed -= 1
       if (task.failed) employees[empIndex].taskNumbers.failed -= 1
 
-      // Remove task
+
       employees[empIndex].tasks.splice(taskIdx, 1)
 
-      // Update state and storage
+
       setUserData({ ...data, employees })
       localStorage.setItem('employees', JSON.stringify(employees))
     }
@@ -139,7 +139,7 @@ const Createdev = () => {
         </form>
       </div>
 
-      {/* ================= Task List ================= */}
+
       <div className="bg-[#1c1c1c] p-5 rounded mt-5">
         <h2 className="text-2xl font-semibold mb-4 text-emerald-400">Current Tasks</h2>
         <div className="space-y-4 max-h-80 overflow-auto">

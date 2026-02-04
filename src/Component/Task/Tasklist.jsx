@@ -5,18 +5,14 @@ const Tasklist = ({ data }) => {
   const handleComplete = (idx) => {
     const employees = JSON.parse(localStorage.getItem('employees'))
 
-    // We need to find the correct employee in the array
+
     const employeeIndex = employees.findIndex(e => e.id === data.id)
 
     if (employeeIndex !== -1) {
-      // Create a copy of the tasks
+
       const tasks = employees[employeeIndex].tasks
 
-      // Calculate original index because we render reversed
-      // If we render `data.tasks.slice().reverse().map(...)`
-      // The element at display index `idx` is at `tasks.length - 1 - idx` in the original array.
-      // Wait, let's verify if we reverse or just use flex-direction.
-      // We will use JS reverse for rendering.
+
 
       const originalIndex = tasks.length - 1 - idx
 

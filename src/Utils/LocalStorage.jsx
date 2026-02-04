@@ -1,4 +1,4 @@
-// ================= EMPLOYEES DATA =================
+
 const employees = [
     {
         id: 1,

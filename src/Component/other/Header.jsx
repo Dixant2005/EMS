@@ -5,7 +5,7 @@ const Header = ({ data, changeUser }) => {
   const logOutUser = () => {
     localStorage.removeItem('loggedInUser')
     changeUser('')
-    // window.location.reload()
+
   }
 
 
